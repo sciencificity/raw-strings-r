@@ -11,9 +11,18 @@ library(tidyverse)
 ```
 
 
+<!-- Photo by <a href="https://unsplash.com/@picoftasty?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mae Mu</a> on <a href="https://unsplash.com/s/photos/string?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+
+<figure>  
+<img src="mae-mu--dyxcGiP-rE-unsplash.jpg" width="353" height="530" alt="ball of string">
+  <figcaption>Picture from <em>Mae Mu</em> on Unsplash</figcaption>
+</figure>
+
+<br>
+
 In version `4.0.0` of R <span style="color: #5196b4;background-color:#f4e4e7">raw strings</span> were introduced. From the [CRAN Page](https://cran.r-project.org/doc/manuals/r-release/NEWS.html) <em>"There is a new syntax for specifying raw character constants similar to the one used in C++: <span style="color: #5196b4;background-color:#f4e4e7">r"(...)"</span> with ... any character sequence not containing the sequence )". This makes it easier to write strings that contain backslashes or both single and double quotes. For more details see <span style="color: #5196b4;background-color:#f4e4e7">?Quotes</span>."</em>
 
-Everything inside the delimiters `r"(` and `)"` are considered literally.
+Everything inside the delimiters <span style="color: #5196b4;background-color:#f4e4e7">`r"(`</span> and <span style="color: #5196b4;background-color:#f4e4e7">`)"`</span> are considered literally.
 
 ```{r a-few-egs}
 r"( Here's a string that contains "double quotes" and single quotes "Ain't that nifty" )"
