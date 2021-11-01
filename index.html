@@ -248,17 +248,17 @@ stringr::str_detect(c(&quot;testing@gmail.com&quot;,
 <h4>str_extract Help Page Examples</h4>
 <pre class="r"><code>shopping_list &lt;- c(&quot;apples x4&quot;, &quot;bag of flour&quot;, &quot;bag of sugar&quot;, &quot;milk x2&quot;)
 
-str_extract(shopping_list, &quot;\\d&quot;) # original way - escape the digit \ by using \\d</code></pre>
+stringr::str_extract(shopping_list, &quot;\\d&quot;) # original way - escape the digit \ by using \\d</code></pre>
 <pre><code>## [1] &quot;4&quot; NA  NA  &quot;2&quot;</code></pre>
-<pre class="r"><code>str_extract(shopping_list, 
+<pre class="r"><code>stringr::str_extract(shopping_list, 
             r&quot;(\d)&quot; # raw string way
             )</code></pre>
 <pre><code>## [1] &quot;4&quot; NA  NA  &quot;2&quot;</code></pre>
-<pre class="r"><code>str_extract(shopping_list, &quot;\\b[a-z]{1,4}\\b&quot;) # original way with escape</code></pre>
+<pre class="r"><code>stringr::str_extract(shopping_list, &quot;\\b[a-z]{1,4}\\b&quot;) # original way with escape</code></pre>
 <pre><code>## [1] NA     &quot;bag&quot;  &quot;bag&quot;  &quot;milk&quot;</code></pre>
-<pre class="r"><code>str_extract(shopping_list, r&quot;(\b[a-z]{1,4}\b)&quot;) # raw string way</code></pre>
+<pre class="r"><code>stringr::str_extract(shopping_list, r&quot;(\b[a-z]{1,4}\b)&quot;) # raw string way</code></pre>
 <pre><code>## [1] NA     &quot;bag&quot;  &quot;bag&quot;  &quot;milk&quot;</code></pre>
-<pre class="r"><code>str_extract_all(shopping_list, &quot;\\b[a-z]+\\b&quot;) # original way with escape</code></pre>
+<pre class="r"><code>stringr::str_extract_all(shopping_list, &quot;\\b[a-z]+\\b&quot;) # original way with escape</code></pre>
 <pre><code>## [[1]]
 ## [1] &quot;apples&quot;
 ## 
@@ -270,7 +270,7 @@ str_extract(shopping_list, &quot;\\d&quot;) # original way - escape the digit \ 
 ## 
 ## [[4]]
 ## [1] &quot;milk&quot;</code></pre>
-<pre class="r"><code>str_extract_all(shopping_list, r&quot;(\b[a-z]+\b)&quot;) # raw string way</code></pre>
+<pre class="r"><code>stringr::str_extract_all(shopping_list, r&quot;(\b[a-z]+\b)&quot;) # raw string way</code></pre>
 <pre><code>## [[1]]
 ## [1] &quot;apples&quot;
 ## 

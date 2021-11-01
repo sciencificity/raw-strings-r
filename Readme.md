@@ -139,13 +139,13 @@ stringr::str_detect(c("testing@gmail.com",
 ``` r
 shopping_list <- c("apples x4", "bag of flour", "bag of sugar", "milk x2")
 
-str_extract(shopping_list, "\\d") # original way - escape the digit \ by using \\d
+stringr::str_extract(shopping_list, "\\d") # original way - escape the digit \ by using \\d
 ```
 
     ## [1] "4" NA  NA  "2"
 
 ``` r
-str_extract(shopping_list, 
+stringr::str_extract(shopping_list, 
             r"(\d)" # raw string way
             )
 ```
@@ -153,19 +153,19 @@ str_extract(shopping_list,
     ## [1] "4" NA  NA  "2"
 
 ``` r
-str_extract(shopping_list, "\\b[a-z]{1,4}\\b") # original way with escape
+stringr::str_extract(shopping_list, "\\b[a-z]{1,4}\\b") # original way with escape
 ```
 
     ## [1] NA     "bag"  "bag"  "milk"
 
 ``` r
-str_extract(shopping_list, r"(\b[a-z]{1,4}\b)") # raw string way
+stringr::str_extract(shopping_list, r"(\b[a-z]{1,4}\b)") # raw string way
 ```
 
     ## [1] NA     "bag"  "bag"  "milk"
 
 ``` r
-str_extract_all(shopping_list, "\\b[a-z]+\\b") # original way with escape
+stringr::str_extract_all(shopping_list, "\\b[a-z]+\\b") # original way with escape
 ```
 
     ## [[1]]
@@ -181,7 +181,7 @@ str_extract_all(shopping_list, "\\b[a-z]+\\b") # original way with escape
     ## [1] "milk"
 
 ``` r
-str_extract_all(shopping_list, r"(\b[a-z]+\b)") # raw string way
+stringr::str_extract_all(shopping_list, r"(\b[a-z]+\b)") # raw string way
 ```
 
     ## [[1]]
